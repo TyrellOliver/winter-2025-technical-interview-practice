@@ -1,39 +1,49 @@
-const isPalindrome = require('./problem');
+const isPalindrome = require("./problem");
 
-describe('isPalindrome', () => {
-    // Simplest valid cases
-    test('empty string should be palindrome', () => {
-        expect(isPalindrome('')).toBe(true);
-    });
+describe("isPalindrome", () => {
+  // Simplest valid cases
+  test("empty string should be palindrome", () => {
+    expect(isPalindrome("")).toBe(true);
+  });
 
-    test('single character should be palindrome', () => {
-        expect(isPalindrome('a')).toBe(true);
-    });
+  test("single character should be palindrome", () => {
+    expect(isPalindrome("a")).toBe(true);
+  });
 
-    // Simple cases
-    test('basic palindrome should return true', () => {
-        expect(isPalindrome('mom')).toBe(true);
-    });
+  // Simple cases
+  test("basic palindrome should return true", () => {
+    expect(isPalindrome("mom")).toBe(true);
+  });
 
-    test('non-palindrome should return false', () => {
-        expect(isPalindrome('hello')).toBe(false);
-    });
+  test("non-palindrome should return false", () => {
+    expect(isPalindrome("hello")).toBe(false);
+  });
 
-    // Complex cases
-    test('palindrome with spaces should return true', () => {
-        expect(isPalindrome('race car')).toBe(true);
-    });
+  // Complex cases
+  test("palindrome with spaces should return true", () => {
+    expect(isPalindrome("race car")).toBe(true);
+  });
 
-    test('palindrome with mixed case should return true', () => {
-        expect(isPalindrome('RaCeCaR')).toBe(true);
-    });
+  test("palindrome with mixed case should return true", () => {
+    expect(isPalindrome("RaCeCaR")).toBe(true);
+  });
 
-    // Edge cases
-    test('palindrome with special characters should return true', () => {
-        expect(isPalindrome('A man, a plan, a canal: Panama')).toBe(true);
-    });
+  // Edge cases
+  test("palindrome with special characters should return true", () => {
+    expect(isPalindrome("A man, a plan, a canal: Panama")).toBe(true);
+  });
 
-    test('palindrome with numbers should work', () => {
-        expect(isPalindrome('12321')).toBe(true);
-    });
+  test("palindrome with numbers should work", () => {
+    expect(isPalindrome("12321")).toBe(true);
+  });
 });
+
+// const firstAndLastAstrisks = require("./warmup");
+
+// describe("firstAndLastAstrisks", () => {
+//     const argument = 5 
+//     const argument2 = 12 
+//   test("first index should be a " * "", () => {
+//     expect(firstAndLastAstrisks("").toBe(true))
+//   });
+// });
